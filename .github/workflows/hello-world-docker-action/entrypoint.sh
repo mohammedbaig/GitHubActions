@@ -9,3 +9,8 @@ RUN chmod +x entrypoint.sh
 
 # Configure the container to be run as an executable
 ENTRYPOINT ["/usr/src/entrypoint.sh"]
+#!/bin/sh -l
+
+echo "hello $1"
+
+echo "time=$(date)" >> $GITHUB_OUTPUT
